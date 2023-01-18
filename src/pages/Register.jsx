@@ -53,7 +53,12 @@ function Register() {
       }
       dispatch(register(userData))
     }
-    navigate("/login")
+    toast.success('You have successfully registered')
+
+      setTimeout(()=>{
+        navigate("/login")
+      }, 2000)
+   
   }
 
   return (

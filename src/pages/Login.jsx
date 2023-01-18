@@ -3,6 +3,7 @@ import { FaSignInAlt } from "react-icons/fa";
 import {login, reset} from "../features/auth/authSlice"
 import {useSelector, useDispatch} from 'react-redux'
 import { useNavigate } from "react-router-dom";
+import {toast} from 'react-toastify'
 
 function Login() {
   const [formData, SetFormData] = useState({
@@ -30,8 +31,12 @@ function Login() {
         password,
       }
       dispatch(login(userData))
+      toast.success('You have logged in successfully')
 
-      navigate("/")
+      setTimeout(()=>{
+        navigate("/")
+      }, 2000)
+      
     }
   
 
