@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import {useSelector, useDispatch} from 'react-redux'
+import { useState } from "react";
+import { useDispatch} from 'react-redux'
 import { useNavigate } from "react-router-dom";
 import {toast} from 'react-toastify' 
 import { FaUser } from "react-icons/fa";
-import{register, reset} from '../features/auth/authSlice'
+import{register} from '../features/auth/authSlice'
 
 
 function Register() {
@@ -19,16 +19,6 @@ function Register() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  const{user, isLoading, isError, isSuccess, message} = useSelector
-  (
-    (state) => state.auth
-  )
-
-
-// useEffect({
-//   // if(isError)
-
-// },[user, isError, isSuccess, message, navigate, dispatch]) 
 
 
   const onChange = (e) => {

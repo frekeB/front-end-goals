@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
-import {login, reset} from "../features/auth/authSlice"
-import {useSelector, useDispatch} from 'react-redux'
+import {login} from "../features/auth/authSlice"
+import {useDispatch} from 'react-redux'
 import { useNavigate } from "react-router-dom";
 import {toast} from 'react-toastify'
 
